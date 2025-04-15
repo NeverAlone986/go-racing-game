@@ -10,7 +10,7 @@ func GetAvailableTracks() []Track {
 	return []Track{
 		{
 			ID:   1,
-			Name: "Городская трасса",
+			Name: "Трасса 1",
 			Obstacles: []Obstacle{
 				{100, 250, 50, 50},
 				{300, 200, 50, 50},
@@ -19,7 +19,7 @@ func GetAvailableTracks() []Track {
 		},
 		{
 			ID:   2,
-			Name: "Горный серпантин",
+			Name: "Трасса 2",
 			Obstacles: []Obstacle{
 				{150, 280, 50, 50},
 				{350, 220, 50, 50},
@@ -28,7 +28,7 @@ func GetAvailableTracks() []Track {
 		},
 		{
 			ID:   3,
-			Name: "Пустыня",
+			Name: "Трасса 3",
 			Obstacles: []Obstacle{
 				{200, 260, 50, 50},
 				{400, 240, 50, 50},

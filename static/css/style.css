@@ -74,3 +74,9 @@ body {
     padding: 5px 10px;
     border-radius: 5px;
 }
+
+.track .high-score {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #ffcc00;
+}
