@@ -1,0 +1,19 @@
+{{define "content"}}
+<div class="tracks-menu">
+    <h1>Выберите трассу</h1>
+    <div class="tracks">
+        {{range .}}
+        <div class="track" onclick="startGame({{.ID}})">
+            <img src="/assets/images/track{{.ID}}.png" alt="{{.Name}}">
+            <h3>{{.Name}}</h3>
+        </div>
+        {{end}}
+    </div>
+</div>
+
+<script>
+function startGame(trackId) {
+    window.location.href = `/game?track=${trackId}`;
+}
+</script>
+{{end}}

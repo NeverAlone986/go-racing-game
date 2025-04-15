@@ -1,0 +1,13 @@
+{{define "content"}}
+<div class="game-container">
+    <canvas id="gameCanvas" width="800" height="500"></canvas>
+    <div class="score">Счет: <span id="score">0</span></div>
+</div>
+
+<script src="/static/wasm/game.wasm"></script>
+<script src="/static/js/app.js"></script>
+<script>
+const trackId = {{.TrackID}};
+startWasmGame(trackId);
+</script>
+{{end}}
