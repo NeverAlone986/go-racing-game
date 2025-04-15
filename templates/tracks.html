@@ -1,19 +1,31 @@
-{{define "content"}}
-<div class="tracks-menu">
-    <h1>Выберите трассу</h1>
-    <div class="tracks">
-        {{range .}}
-        <div class="track" onclick="startGame({{.ID}})">
-            <img src="/assets/images/track{{.ID}}.png" alt="{{.Name}}">
-            <h3>{{.Name}}</h3>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Выбор трассы</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <div class="tracks-menu">
+        <h1>Выберите трассу</h1>
+        <div class="tracks">
+            <div class="track" onclick="startGame(1)">
+                <img src="/assets/images/track1.png" alt="Городская трасса">
+                <h3>Городская трасса</h3>
+            </div>
+            <div class="track" onclick="startGame(2)">
+                <img src="/assets/images/track2.png" alt="Горный серпантин">
+                <h3>Горный серпантин</h3>
+            </div>
+            <div class="track" onclick="startGame(3)">
+                <img src="/assets/images/track3.png" alt="Пустыня">
+                <h3>Пустыня</h3>
+            </div>
         </div>
-        {{end}}
     </div>
-</div>
-
-<script>
-function startGame(trackId) {
-    window.location.href = `/game?track=${trackId}`;
-}
-</script>
-{{end}}
+    <script>
+    function startGame(trackId) {
+        window.location.href = `/game?track=${trackId}`;
+    }
+    </script>
+</body>
+</html>
